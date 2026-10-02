@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>HAng the man</title>
+      <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+      <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+  </head>
+  <body>
+    <h1>Hangman</h1>
+    <button id="start-spill">Start runde</button>
+    <input type="text" id="bokstav" placeholder="Skriv inn bokstav" maxlength="1"/>
+    <button id="gjett-button">Gjett</button>
+    <div id="output"></div>
+    <script type="py" src="./main.py" config="./pyscript.json"></script>
+    <img src="/svg/hangman.svg">
+  </body>
+</html>
