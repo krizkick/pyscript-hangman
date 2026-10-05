@@ -1,0 +1,77 @@
+/* ---- Starttilstand for SVG-en ----
+   Galgen og den glade gutten vises med en gang. Resten er skjult
+   til main.py viser dem (vis() setter display: inline, og det slår denne regelen). */
+#base4Longer, #base5, #base6, #base7, #base8, #base9, #base10 {
+  display: none;
+}
+
+/* ---- Farger: bytt her ---- */
+:root {
+  --papir: #eef2f7;
+  --blekk: #1d2433;
+  --merkepenn: hsl(233, 100%, 62%);
+}
+
+/* ---- Side ---- */
+body {
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  background: var(--papir);
+  color: var(--blekk);
+  font-family: "Crete Round", serif;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+}
+
+/* ---- Knapper og tekstfelt ---- */
+button, input {
+  margin: 0.25rem;
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--blekk);
+  border-radius: 0.5rem;
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: var(--merkepenn);
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+input {
+  width: 10rem;
+  background: white;
+  text-align: center;
+}
+
+:focus-visible {
+  outline: 3px solid var(--blekk);
+  outline-offset: 2px;
+}
+
+/* ---- Ordet som gjettes ---- */
+.text {
+  min-height: 1.5em;
+  margin: 1.25rem 0;
+  font-family: "Crete Round", serif;
+  font-size: clamp(1.25rem, 6vw, 1.75rem);
+  letter-spacing: 0.1em;
+  overflow-wrap: anywhere;
+}
+
+/* ---- Galgemannen ---- */
+#hangman {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}

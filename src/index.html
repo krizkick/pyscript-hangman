@@ -4,17 +4,18 @@
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <title>HAng the man</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
-      <style>
-         #base4Longer, #base5, #base6, #base7, #base8, #base9, #base10 { display: none; }
-      </style>
+      <link rel="stylesheet" href="style.css">
       <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
   </head>
   <body>
     <h1>Hangman</h1>
     <button id="start-spill">Start runde</button>
     <input type="text" id="bokstav" placeholder="Skriv inn bokstav" maxlength="1"/>
-    <div id="output">...</div>
+    <div id="output" class="text"></div>
     <script type="py" src="./main.py" config="./pyscript.json"></script>
     <svg
     version="1.1"
@@ -346,6 +347,6 @@
     </g>
     <!--end happy group-->
     </svg>
-    <div id="feil"></div>
+    <div id="feil" class="text"></div>
   </body>
 </html>
