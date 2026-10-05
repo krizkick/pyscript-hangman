@@ -1,6 +1,5 @@
 {
   "files": {
-    "./ordliste.csv": "./ordliste.csv",
-    "./svg/hangman.svg":"./svg/hangman.svg"
+    "./ordliste.csv": "./ordliste.csv"
   }
 }
