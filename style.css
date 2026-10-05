@@ -1,6 +1,3 @@
-/* ---- Starttilstand for SVG-en ----
-   Galgen og den glade gutten vises med en gang. Resten er skjult
-   til main.py viser dem (vis() setter display: inline, og det slår denne regelen). */
 #base4Longer, #base5, #base6, #base7, #base8, #base9, #base10 {
   display: none;
 }

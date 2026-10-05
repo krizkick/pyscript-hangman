@@ -6,13 +6,14 @@
       <title>Hangman</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/js-confetti@0.12.0/dist/js-confetti.browser.js"></script>
       <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
       <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
       <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
   </head>
   <body>
-    <h1>Hangman</h1>
+    <h1 id="tittel">Hangman</h1>
     <button id="start-spill">Start runde</button>
     <input type="text" id="bokstav" placeholder="Skriv inn bokstav" maxlength="1"/>
     <div id="output" class="text"></div>

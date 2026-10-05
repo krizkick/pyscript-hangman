@@ -1,4 +1,4 @@
-from pyscript import when, document
+from pyscript import when, document, window
 import random
 
 runde_status = "vant"
@@ -28,19 +28,26 @@ def Start_runde(event):
         if liste["tom"] == liste["ord"]:
             runde_status = "vant"
             document.getElementById("start-spill").innerText = "Start runde"
+            document.getElementById("tittel").innerText = "Du vant!"
+            confetti = window.JSConfetti.new()
+            confetti.addConfetti()
+
         elif feil["forsøk"] >= len(DELER):
             runde_status = "tapt"
             document.getElementById("start-spill").innerText = "Start runde"
-
-
+            document.getElementById("output").innerText = skriv_ut_liste(liste["ord"])
+            document.getElementById("tittel").innerText = "Du tapte!"
 
         tegn_galgemann(runde_status, feil["forsøk"])
 
     elif runde_status != "igang":
-        #setter status
+        #setter status 
         runde_status = "igang"
-        #bytter navn på knapp
+        #fjerner tidligere forsøk
+        document.getElementById("feil").innerText = ""
+        #bytter navn på knapp og tittel
         document.getElementById("start-spill").innerText = "Gjett"
+        document.getElementById("tittel").innerText = "Hangman"
         #resetter feil ordbok
         feil["forsøk"] = 0
         feil["bokstav"] = []
